@@ -19,3 +19,18 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# --- Rules for Gson ---
+# Keep the model classes that Gson uses for serialization/deserialization.
+# Replace 'com.la87hn.la87laprimera.models.**' with your app's models package if it's different.
+-keep class com.la87hn.la87laprimera.models.** { *; }
+-keepattributes Signature
+
+# --- Rules for OkHttp / Retrofit ---
+# These are often not needed as they bundle their own rules, but can be useful in some cases.
+-dontwarn retrofit2.**
+-keep class retrofit2.** { *; }
+-keep interface retrofit2.** { *; }
+-dontwarn com.squareup.okhttp3.**
+-keep class com.squareup.okhttp3.** { *; }
+-keep interface com.squareup.okhttp3.** { *; }
