@@ -56,3 +56,8 @@ dependencies {
     implementation 'com.github.mohammadima3oud:Android-Intent-Library:1.0.0'
 
 }
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}

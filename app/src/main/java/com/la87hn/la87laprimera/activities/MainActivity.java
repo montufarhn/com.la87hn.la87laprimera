@@ -75,7 +75,14 @@ public class MainActivity extends AppCompatActivity implements Tools.EventListen
     static Context context;
 
     // Variables locales para las URLs de redes sociales
-    private String radioURL, tvURL, numeroWhatsapp, urlFacebook, urlInstagram, urlTikTok, urlTwitter, urlYouTube, urlWebsite;
+    private String radioURL;
+    private String numeroWhatsapp;
+    private String urlFacebook;
+    private String urlInstagram;
+    private String urlTikTok;
+    private String urlTwitter;
+    private String urlYouTube;
+    private String urlWebsite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -211,7 +218,7 @@ public class MainActivity extends AppCompatActivity implements Tools.EventListen
             if (jsonArray.length() > 0) {
                 JSONObject radioInfo = jsonArray.getJSONObject(0);
                 radioURL = radioInfo.optString("radio_url");
-                tvURL = radioInfo.optString("tv_url");
+                String tvURL = radioInfo.optString("tv_url");
                 numeroWhatsapp = radioInfo.optString("numero_whatsapp");
                 urlFacebook = radioInfo.optString("url_facebook");
                 urlInstagram = radioInfo.optString("url_instagram");
